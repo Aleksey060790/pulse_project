@@ -4,6 +4,9 @@
         position: relative;
         width: 750px;
         margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
     }
     .slick-prev, .slick-next {
         position: absolute;

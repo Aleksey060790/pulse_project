@@ -1,10 +1,12 @@
 @import 'base/variables';
+@import 'base/animations';
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 .container {
     max-width: 950px;
     margin: 0 auto;
+    position: relative;
 }
 @import 'blocks/promo';
 @import 'blocks/header';
@@ -14,6 +16,12 @@
 @import 'blocks/titles';
 @import 'blocks/forms';
 @import 'blocks/carousel';
+@import 'blocks/catalog';
+@import 'blocks/reviews';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/pageup';
+
 
 
 
@@ -24,7 +32,15 @@
     .promo__icons {
        margin-top: 50px; 
     }
-    
+    .reviews__inner {
+        padding-right: 5px;
+        padding-left: 60px;
+    }
+    .reviews-descr {
+        &__text {
+            font-size: 12px;
+        }          
+    }
 }
 
 @media (max-width: 768px) {
@@ -62,6 +78,33 @@
     }
     .consultation__descr {
         font-size: 18px;
+    }
+    .carousel {
+        &__inner {
+            width: 700px;  
+        }
+    }
+    .slick-slide {
+        img {
+            max-width: 700px;
+        }
+    }
+    .catalog__content {
+        justify-content: space-around;
+    }
+    .catalog {
+        &__tabs {
+            margin: 10px 5px;
+        }
+        &__tab {
+            margin: 5px 5px;
+        }
+    }
+    .reviews__inner {
+        padding-left: 25px;
+    }
+    .reviews__descr {
+        width: 545px;
     }
 }
 
@@ -130,6 +173,30 @@
     }
     .button_submit {
         height: 45px;
+    }
+    .carousel {
+        &__inner {
+            width: 550px;  
+        }
+    }
+    .slick-slide {
+        img {
+            max-width: 550px;
+        }
+    }
+    .reviews__item {
+        margin-top: 30px;
+    }
+    .reviews__inner {
+        padding-left: 10px;
+    }
+    .reviews__descr {
+        width: 360px;
+    }
+    .reviews-descr {
+        &__name {
+            font-size: 15px;
+        }          
     }
 }
 
@@ -201,6 +268,21 @@
     .title_left {
         font-weight: 500;
     }
+    .carousel {
+        &__inner {
+            width: 510px;  
+        }
+    }
+    .slick-slide {
+        img {
+            max-width: 510px;
+        }
+    }
+    .reviews-descr {
+        &__name {
+            font-size: 15px;
+        }          
+    }
 }
 
 @media (max-width: 440px) {
@@ -271,6 +353,16 @@
         height: 35px;
         font-size: 14px;
     }
+    .carousel {
+        &__inner {
+            width: 435px;  
+        }
+    }
+    .slick-slide {
+        img {
+            max-width: 435px;
+        }
+    }
 }
 
 
@@ -316,5 +408,25 @@
     }
     .consultation__descr {
         margin-bottom: 30px;
+    }
+    .carousel {
+        &__inner {
+            width: 320px;  
+        }
+    }
+    .slick-slide {
+        img {
+            max-width: 320px;
+        }
+    }
+    .catalog {
+        .title {
+            font-size: 22px;
+        }
+        &__tab {
+            width: 296px;
+            height: 40px;
+            line-height: 38px;
+        }
     }
 }
